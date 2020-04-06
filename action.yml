@@ -2,6 +2,7 @@ name: 'Pip Upload'
 description: 'build & upload pip package'
 branding:
   icon: 'upload-cloud'
+  color: 'blue'
 inputs:
   deps_list:
     description: dependency list

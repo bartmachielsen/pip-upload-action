@@ -1,0 +1,30 @@
+name: 'Pip Upload'
+description: 'build & upload pip package'
+inputs:
+  deps_list:
+    description: dependency list
+    required: true
+    default: requirements.txt
+  setup:
+    description: setup script
+    required: true
+    default: setup.py
+  username:
+    description: pip username
+    required: true
+  password:
+    description: pip password
+    required: true
+  path:
+    description: path of git repo relative to GITHUB_WORKSPACE(no trailing slash)
+    required: true
+    default: ''
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
+    - ${{ inputs.deps_list }}
+    - ${{ inputs.setup }}
+    - ${{ inputs.username }}
+    - ${{ inputs.password }}

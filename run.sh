@@ -7,9 +7,6 @@ cd $GITHUB_WORKSPACE/$1
 pip3 install wheel twine
 pip3 install -r $2
 
-# test
-python3 -m unittest
-
 # build
 python3 $3 sdist bdist_wheel
 

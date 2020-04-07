@@ -1,4 +1,4 @@
-# pip-upload
+# Pip Upload
 
 Github action that builds &amp; uploads python package to pypi
 
@@ -24,8 +24,10 @@ jobs:
     steps:
       - name: Prepare repo
         uses: actions/checkout@master
+      - name: Test
+        uses: onichandame/python-test-action@master
       - name: Upload
-        uses: onichandame/pip-upload@master
+        uses: onichandame/pip-upload-action@master
         with:
           username: '__token__'
           password: ${{ secrets.PIP_PASSWORD }}

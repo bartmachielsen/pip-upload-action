@@ -5,7 +5,7 @@ branding:
   color: 'blue'
 inputs:
   deps_list:
-    description: dependency list
+    description: file containing dependencies (accepted by pip install -r) -- use NONE if you do not need to install dependencies
     required: true
     default: requirements.txt
   setup:
@@ -15,11 +15,12 @@ inputs:
   username:
     description: pip username
     required: true
+    default: __token__
   password:
     description: pip password
     required: true
   path:
-    description: path of git repo relative to GITHUB_WORKSPACE(no trailing slash)
+    description: path of git repo relative to GITHUB_WORKSPACE (no trailing slash)
     required: true
     default: ''
 runs:

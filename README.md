@@ -33,7 +33,7 @@ jobs:
           password: ${{ secrets.PIP_PASSWORD }}
 ```
 
-For those who are not familiar with Github secrets, see [this](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#using-encrypted-secrets-in-a-workflow)
+For those who are not familiar with Github secrets, see [this](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#using-encrypted-secrets-in-a-workflow).
 
 For those who are not familiar with pip token, see [this](https://pypi.org/help/#apitoken). It is highly recommended to use pip token for authorisation.
 

@@ -4,7 +4,7 @@
 cd $GITHUB_WORKSPACE/$1
 
 # install dependencies
-pip3 install wheel twine
+pip3 install wheel twine==1.15.0
 if [ "NONE" = "$2" ]
 then
     echo "Skipping installation of dependencies as requested by user"
